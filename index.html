@@ -1,8 +1,38 @@
 <html>
     <head>
-        <title>title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+        <title>わるるのサイト</title>
+        <!-- CSS 読み込み方法 -->
+        <link rel="stylesheet" type="text/css" href="./main.css">
+        <script>
+            function twoDigit(num) {
+              let ret;
+              if( num < 10 ) 
+                ret = "0" + num; 
+              else 
+                   ret = num; 
+              return ret;
+            }
+            function showClock() {
+              let nowTime = new Date();
+              let nowHour = twoDigit( nowTime.getHours() );
+              let nowMin  = twoDigit( nowTime.getMinutes() );
+              let nowSec  = twoDigit( nowTime.getSeconds() );
+              let msg = "現在時刻：" + nowHour + ":" + nowMin + ":" + nowSec;
+              document.getElementById("realtime").innerHTML = msg;
+            }
+            setInterval('showClock()',1000);
+          </script>
+
     </head>
     <body>
+        <h1>
+            わるる
+
+
+        </h1>
+        <p id="realtime"></p>
         <p>aaa</p>
     </body>
 </html>

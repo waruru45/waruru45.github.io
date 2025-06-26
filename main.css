@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "APJapanesefont";
+    src: url("APJapanesefont.ttf");
+    font-display: swap;
+}
+
+body {
+    font-family: "APJapanesefont";
+}
